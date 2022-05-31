@@ -1,0 +1,26 @@
+<div class="container">
+  <h1><%= @order.name %></h1>
+</div>
+
+<h3>Products</h3>
+
+<% @orders.users.each do |user| %>
+  <div class="container">
+    <div class="row py-3">
+      <div class="col-6">
+        <p><%= user.product.title %></p>
+      </div>
+    </div>
+    <%= link_to 'delete', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+<hr>
+
+<%= simple_form_for [@order, @product] do |f| %>
+  <%= f.association :product, collection: @products, prompt: 'Select a product', label: false %>
+  <%= f.input :comment, placeholder: 'Enter a comment...', label: false %>
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>
+
+<hr>
+<%= link_to 'back', root_path, class: 'btn btn-success' %>
