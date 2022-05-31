@@ -1,0 +1,27 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-forms {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/fotos-gratis/mesa-alta-cheia-de-deliciosos-arranjos-de-comida_23-2149141347.jpg?w=1480&t=st=1654031330~exp=1654031930~hmac=6e6e22a570b83cb68ead57f0f8484434abf704084e04a1f494acde52f4cfde49");
+}
