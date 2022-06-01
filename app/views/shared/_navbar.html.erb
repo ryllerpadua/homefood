@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-sm fixed-top p-0" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+
+<nav class="navbar navbar-default p-0"></nav> <!-- Dummy nav bar -->
+</nav>
+<nav class="navbar navbar-expand-sm fixed-top p-0" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">  <!-- Real nav bar -->
   <%= link_to root_path do %>
     <%= image_tag 'logo_medio.png', size: '80x80', class: 'd-inline-block' %>
   <% end %>
