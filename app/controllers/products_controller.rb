@@ -1,20 +1,33 @@
 class ProductsController < ApplicationController
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def new
+    @product = Product.new
+  end
+
   def create
     @product = Product.new(product_params)
-    @order = Order.find(params[:order_id])
-    @product.order = @order
-    if @product.save
-      redirect_to @order
-    else
-      @users = User.all.order(:name)
-      render 'orders/show'
-    end
+    @product.user = current_user
+    @product.save
+    redirect_to products_path
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_params)
+    redirect_to product_path(@product)
   end
 
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to @product.order
+    redirect_to products_path
   end
 
   private

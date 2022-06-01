@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
   devise_for :users
-  resources :orders do
-    resources :products, only: %i[new create destroy]
-  end
+  resources :products, only: %i[index new create edit update destroy show]
+  root to: 'pages#home'
 end
