@@ -10,11 +10,15 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @product = Product.find(params[:product_id])
     @order = Order.new
   end
 
   def create
+    @product = Product.find(params[:product_id])
     @order = Order.new(order_params)
+    @order.product = @product
+    @order.user = current_user
     if @order.save
       redirect_to @order
       # redirect_to list_path(@list)
@@ -26,6 +30,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:product_id, :quantity)
+    params.require(:order).permit(:quantity)
   end
 end
