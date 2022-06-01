@@ -1,1 +1,8 @@
 <h1>AQUI E A PAGINA DE PRODUTOS</h1>
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.title, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'create new product', new_product_path(@product)%>
