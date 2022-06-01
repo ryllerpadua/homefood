@@ -1,0 +1,80 @@
+.banner {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+
+}
+
+.banner p {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.inner-banner {
+  display: flex;
+  background-color: #a82d49;
+  color: #fff;
+  padding: 40px 0;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+.center-banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
+}
+
+.center-banner h3 {
+  font-size: 32px;
+  line-height: 45px;
+  color: #43121d;
+  font-weight: 700;
+}
+
+.center-banner p {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
+.center-banner li {
+  font-family: 'Roboto', sans-serif;
+  color: #A82D49;
+  font-size: 30px;
+}
+
+.center-banner li i {
+  color: #A82D49;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.center-banner-pic {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.center-banner-text {
+  padding: 40px;
+  width: 30%;
+}
