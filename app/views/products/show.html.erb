@@ -8,3 +8,5 @@
 <%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <%= link_to 'Return to products', products_path() %>
+
+<%= link_to 'Buy', new_product_order_path(@product) %>

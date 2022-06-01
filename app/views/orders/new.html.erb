@@ -1,7 +1,6 @@
 <h1>Create a new order</h1>
-
-<%= simple_form_for @order do |f| %>
-  <%= f.input :product_id %>
+<p>Product: <%= @product.title %></p>
+<%= simple_form_for [@product, @order] do |f| %>
   <%= f.input :quantity %>
   <%= f.submit class: 'btn btn-success' %>
 <% end %>
