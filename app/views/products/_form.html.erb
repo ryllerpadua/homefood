@@ -1,9 +1,10 @@
-<div class="container">
+<div class="container mb-5  ">
 <%= simple_form_for product do |f| %>
   <%= f.input :category, as: :select, collection: @categories, prompt: 'Select a category', label: 'Category' %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
 </div>
