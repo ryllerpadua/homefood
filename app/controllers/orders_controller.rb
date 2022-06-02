@@ -12,9 +12,6 @@ class OrdersController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
     @order = Order.new
-    # sum = @sum
-    # @sum = @product.price.to_i * 3
-    # return @sum
   end
 
   def create
