@@ -6,8 +6,10 @@
     <% @products.each do |product| %>
       <div class="col-4">
         <div class="food-card w-100">
-       <%= cl_image_tag product.photo.key, class: "food-card-image", crop: :fill %>
-       <%= link_to product.title.capitalize, product_path(product), class: "food-card-title" %>
+        <% if product.photo.attached? %>
+          <%= cl_image_tag product.photo.key, class: "food-card-image", crop: :fill %>
+        <% end %>
+         <%= link_to product.title.capitalize, product_path(product), class: "food-card-title" %>
         </div>
       </div>
     <% end %>
