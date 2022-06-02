@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   has_many :orders
   has_one_attached :photo
 
-# CATEGORY = ['italian', 'japenese', 'brasilian', 'arab']
+  validates :category, :title, :description, :price, presence: true
+
+# CATEGORY = ['Pastry', 'Drinks', 'Packed Lunch', 'Chinese', 'Sweets', 'Healthy', 'Sushi', 'Pizza', 'Pasta', 'Barbecue', 'Breakfast', 'Desert', 'Sandwich', 'Brazilian', 'Frozen', 'Arab' ]
 
 end
