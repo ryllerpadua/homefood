@@ -1,10 +1,15 @@
 <div class="container mt-5">
   <h1>AQUI E A PAGINA DE PRODUTOS</h1>
-  <ul>
+  <div class="row">
     <% @products.each do |product| %>
-      <li><%= link_to product.title, product_path(product) %></li>
+      <div class="col-4">
+        <div class="food-card">
+        <%= image_tag 'https://img.freepik.com/fotos-gratis/sortido-close-up-com-deliciosa-comida-brasileira_23-2148739180.jpg?w=1480&t=st=1654178442~exp=1654179042~hmac=cb7b07a79611d81ad5d22ce45d151c037d6e54a4f889c5bee3ca2109381b1ef0', alt: 'icon' %>
+        <%= link_to product.title, product_path(product) %>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 
   <%= link_to 'create new product', new_product_path(@product)%>
 </div>
