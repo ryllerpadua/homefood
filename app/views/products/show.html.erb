@@ -2,11 +2,18 @@
 <p><%= @product.description %></p>
 <p><%= @product.price %></p>
 
+ <% if policy(@product).edit? %>
+<%= link_to 'edit', edit_product_path(@product) %>
+<% end %>
 
-<%= link_to 'edit', edit_product_path(@product)  %>
-
+ <% if policy(@product).destroy? %>
 <%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
 
 <%= link_to 'Return to products', products_path() %>
 
-<%= link_to 'Buy', new_product_order_path(@product) %>
+<% if policy(Product).create? %>
+     <%= link_to 'Buy', new_product_order_path(@product) %>
+  <%else%>
+      <%= link_to 'Buy', new_user_session_path(@user) %>
+<% end %>
