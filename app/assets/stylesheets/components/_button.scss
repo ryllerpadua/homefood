@@ -39,3 +39,16 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-new-product {
+  text-decoration: none;
+  border: 1px solid #A92D48;
+  color: #A92D48;
+  padding: 15px 30px;
+  display: inline-block;
+
+  &:hover {
+    background-color: #A92D48;
+    color: #fff;
+  }
+}

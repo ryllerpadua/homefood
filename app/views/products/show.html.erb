@@ -1,11 +1,13 @@
 <div class="product-details">
+<%= link_to 'Return to products', products_path() %>
   <div class="card-product">
     <%= cl_image_tag @product.photo.key, class: "food-card-image", crop: :fill %>
     <div class="card-product-infos">
       <h2><%= @product.title.capitalize %></h2>
       <p><%= @product.category.capitalize %></p>
-      <p><%= @product.description.capitalize%></p>
-      <p><%= @product.price %></p>
+      <h3><%= @product.description.capitalize%></h3>
+      <h4><%= @product.price %></h4>
+      <h5><%= link_to 'Buy', new_product_order_path(@product) %></h5>
 
     </div>
   </div>
@@ -14,7 +16,5 @@
 
   <%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
 
-  <%= link_to 'Return to products', products_path() %>
 
-  <%= link_to 'Buy', new_product_order_path(@product) %>
 </div>

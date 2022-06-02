@@ -1,18 +1,17 @@
 <div class="container mt-5">
-  <h1>AQUI E A PAGINA DE PRODUTOS</h1>
+  <h1 class="title-products">Fresh and delicious meals</h1>
+    <%= link_to '+ create new product', new_product_path(@product), class: "btn-new-product" %>
+
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-4">
-        <div class="food-card">
+        <div class="food-card w-100">
         <% if product.photo.attached? %>
           <%= cl_image_tag product.photo.key, class: "food-card-image", crop: :fill %>
         <% end %>
-        <h3 class="text-center"><%= link_to product.title.capitalize, product_path(product) %></h3>
-        <h4>
+         <%= link_to product.title.capitalize, product_path(product), class: "food-card-title" %>
         </div>
       </div>
     <% end %>
   </div>
-
-  <%= link_to 'create new product', new_product_path(@product)%>
 </div>
