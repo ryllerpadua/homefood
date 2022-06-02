@@ -1,12 +1,18 @@
-<h2><%= @product.title %></h2>
-<p><%= @product.description %></p>
-<p><%= @product.price %></p>
+<div class="product-details">
+  <div class="card-product">
+    <%= cl_image_tag @product.photo.key, class: "food-card-image", crop: :fill %>
+    <div class="card-product-infos">
+      <h2><%= @product.title %></h2>
+      <p><%= @product.description %></p>
+      <p><%= @product.price %></p>
+    </div>
+  </div>
 
+  <%= link_to 'edit', edit_product_path(@product)  %>
 
-<%= link_to 'edit', edit_product_path(@product)  %>
+  <%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
 
-<%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Return to products', products_path() %>
 
-<%= link_to 'Return to products', products_path() %>
-
-<%= link_to 'Buy', new_product_order_path(@product) %>
+  <%= link_to 'Buy', new_product_order_path(@product) %>
+</div>
