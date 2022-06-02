@@ -1,5 +1,6 @@
 <h1>Create a new order</h1>
 <p>Product: <%= @product.title %></p>
+<p>Price: R$<%= @product.price %></p>
 <%= simple_form_for [@product, @order] do |f| %>
   <%= f.input :quantity %>
   <%= f.submit class: 'btn btn-success' %>
