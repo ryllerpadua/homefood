@@ -1,6 +1,6 @@
 <div class="container mb-5  ">
 <%= simple_form_for product do |f| %>
-  <%= f.input :category %>
+  <%= f.input :category, as: :select, collection: @categories, prompt: 'Select a category', label: 'Category' %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>

@@ -2,9 +2,11 @@
   <div class="card-product">
     <%= cl_image_tag @product.photo.key, class: "food-card-image", crop: :fill %>
     <div class="card-product-infos">
-      <h2><%= @product.title %></h2>
-      <p><%= @product.description %></p>
+      <h2><%= @product.title.capitalize %></h2>
+      <p><%= @product.category.capitalize %></p>
+      <p><%= @product.description.capitalize%></p>
       <p><%= @product.price %></p>
+
     </div>
   </div>
 

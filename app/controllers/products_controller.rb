@@ -3,12 +3,14 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+
   def show
     @product = Product.find(params[:id])
   end
 
   def new
     @product = Product.new
+    @categories = ['Arab', 'Barbecue', 'Brazilian', 'Burguer', 'Drinks', 'Chinese', 'Frozen', 'Healthy', 'Hot Dog', 'Italian', 'Packed Lunch', 'Pastry', 'Pizza', 'Sandwhich', 'Sushi', 'Sweets', 'Other']
   end
 
   def create
