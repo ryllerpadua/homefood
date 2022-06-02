@@ -4,6 +4,10 @@
 
   <div class="row">
     <% @products.each do |product| %>
+      <li><%= link_to product.title, product_path(product) %></li>
+      <% end %>
+    <% if policy(Product).create? %>
+      <%= link_to 'create new product', new_product_path(@product)%>
       <div class="col-4">
         <div class="food-card w-100">
         <% if product.photo.attached? %>

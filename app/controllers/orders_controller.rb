@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    authorize @order
     @product = Product.new
     @users = User.all.order(:name)
   end
@@ -12,11 +13,13 @@ class OrdersController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
     @order = Order.new
+    authorize @order
   end
 
   def create
     @product = Product.find(params[:product_id])
     @order = Order.new(order_params)
+    authorize @order
     @order.product = @product
     @order.user = current_user
     if @order.save
@@ -32,4 +35,5 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:quantity)
   end
+
 end
