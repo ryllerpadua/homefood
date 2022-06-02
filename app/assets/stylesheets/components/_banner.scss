@@ -6,7 +6,8 @@
   padding: 150px 0;
   height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 
 .banner h1 {
@@ -20,7 +21,7 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: 0.8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -41,7 +42,11 @@
   text-align: center;
   align-items: center;
   font-size: 25px;
-  font-family: 'Roboto', 'sans-serif';
+  margin-right: 0px;
+}
+
+.inner-banner p {
+  font-size: 20px;
 }
 
 .center-banner {
@@ -50,7 +55,8 @@
   align-items: center;
   background-color: #fff;
   width: 80%;
-  margin: auto;
+  margin: 30px;
+
 }
 
 .center-banner h3 {
@@ -61,28 +67,25 @@
 }
 
 .center-banner p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Nunito", "Helvetica", "sans-serif";
   color: #555;
 }
 
 .center-banner li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Nunito", "Helvetica", "sans-serif";
   color: #A82D49;
   font-size: 20px;
 }
 
-.center-banner li i {
-  color: #A82D49;
-  font-size: 20px;
-  font-weight: bolder;
-}
 .center-banner-pic {
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+
 }
 
 .center-banner-text {
-  padding: 30px;
-  width: 40%;
+  padding: 60px;
+  width: 60%;
+
 }

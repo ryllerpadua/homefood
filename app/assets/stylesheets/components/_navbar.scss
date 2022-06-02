@@ -8,7 +8,8 @@
   align-items: center;
   background-color: transparent;
   transition: 0.5s ease-out;
-  gap: 10px;
+
+
 }
 
 .navbar-white {
@@ -17,24 +18,21 @@
   transition: 0.5s;
   height: 80px;
 
-  #logo {
+    #logo {
     width: 60px;
     height: 60px;
     transition: 0.5s;
-  }
-  .nav-link {
+    }
+    .nav-link {
     color: #A82D49;
     transition: 0.5s;
-  }
+    }
 }
 
-#logo {
-  transition: 0.5s;
-}
 
 .nav-link {
   color: #fff;
-  font-family: "Roboto", "sans-serif";
+  font-family: "Nunito", "Helvetica", "sans-serif";
   text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   font-size: 25px;
   font-weight: bold;
