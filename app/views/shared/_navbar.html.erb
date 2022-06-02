@@ -13,6 +13,15 @@
         <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
       <% end %>
       </li>
+      <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="assets/avatar.png" />
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/users/edit"> Edit </a>
+          <a class="dropdown-item" href="/users/edit"> Logout </a>
+        </div>
+      <% end %>
+      </li>
     </ul>
   </div>
 </nav>

@@ -4,6 +4,11 @@ class ProductsController < ApplicationController
   def index
     # @products = Product.all , foi substituido pelo policy abaixo.
     @products = policy_scope(Product)
+    if params[:query].present?
+      @products = Product.search_by_title(params[:query])
+    else
+      @products = Product.all
+    end
   end
 
   def show
@@ -12,6 +17,7 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     authorize @product
+    @categories = ['Arab', 'Barbecue', 'Brazilian', 'Burguer', 'Drinks', 'Chinese', 'Frozen', 'Healthy', 'Hot Dog', 'Italian', 'Packed Lunch', 'Pastry', 'Pizza', 'Sandwhich', 'Sushi', 'Sweets', 'Other']
   end
 
   def create
@@ -38,7 +44,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:category, :title, :description, :price)
+    params.require(:product).permit(:category, :title, :description, :price, :photo)
   end
 
   def set_product_authorization

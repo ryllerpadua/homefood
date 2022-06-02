@@ -1,4 +1,11 @@
 <div class="container">
-  <h1><%= @order.product.title %></h1>
-  <p>quantity: <%= @order.quantity %></p>
+  <h1><%= @order.product.title.capitalize %></h1>
+  <p>Quantity: <%= @order.quantity %></p>
+  <p>Price: <%=number_to_currency(@order.product.price)%></p>
+  <p>Total: <%=number_to_currency(@order.product.price * @order.quantity)%></p>
+  <h2>Endereço para entrega</h2>
+  <p>Name: <%=@order.user.name  %></p>
+  <p>Address: <%=@order.user.address %></p>
+    <%= link_to 'Purchase', root_path, notice: '🎉 Purchase completed successfully. 🎉', class: 'btn btn-success' %>
+
 </div>

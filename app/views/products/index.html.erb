@@ -1,12 +1,21 @@
 <div class="container mt-5">
   <h1>AQUI E A PAGINA DE PRODUTOS</h1>
-  <ul>
+  <div class="row">
     <% @products.each do |product| %>
       <li><%= link_to product.title, product_path(product) %></li>
       <% end %>
     <% if policy(Product).create? %>
       <%= link_to 'create new product', new_product_path(@product)%>
+      <div class="col-4">
+        <div class="food-card">
+        <% if product.photo.attached? %>
+          <%= cl_image_tag product.photo.key, class: "food-card-image", crop: :fill %>
+        <% end %>
+        <h3 class="text-center"><%= link_to product.title.capitalize, product_path(product) %></h3>
+        <h4>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 
 </div>
