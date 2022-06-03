@@ -1,11 +1,19 @@
-<div class="container">
-  <h1><%= @order.product.title.capitalize %></h1>
-  <p>Quantity: <%= @order.quantity %></p>
-  <p>Price: <%=number_to_currency(@order.product.price)%></p>
-  <p>Total: <%=number_to_currency(@order.product.price * @order.quantity)%></p>
-  <h2>Endereço para entrega</h2>
-  <p>Name: <%=@order.user.name  %></p>
-  <p>Address: <%=@order.user.address %></p>
-    <%= link_to 'Purchase', root_path, class: 'btn btn-success', data: {confirm: '🎉 Purchase completed successfully. 🎉' } %>
-
+    <div class="container">
+    <div class="card-product-final d-flex flex-column h-75 w-50 mt-5 mx-auto p-5">
+      <h1><strong><%= @order.product.title.capitalize %></strong></h1>
+      <h2>Quantity: <%= @order.quantity %></h2>
+      <p>Price: <%=number_to_currency(@order.product.price)%></p>
+      <h3>Total: <%=number_to_currency(@order.product.price * @order.quantity)%></h3>
+      <br>
+      <h4 div class="mt-2"><strong>Delivery Adress</strong></h4>
+      <h5><strong>Name:</strong> <%=@order.user.name  %></h5>
+      <h6><strong>Address:</strong> <%=@order.user.address %></h6>
+      <br>
+        <%= link_to 'Purchase', root_path, class: "btn-order mt-2 mb-3", data: {confirm: '🎉 Purchase completed successfully. 🎉' } %>
+    </div>
+  </div>
 </div>
+
+
+
+<%# <h1 class="text-center mt-5">Edit Product</h1> %>

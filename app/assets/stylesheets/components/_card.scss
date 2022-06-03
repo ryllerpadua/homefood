@@ -24,6 +24,55 @@
   align-items: center;
 }
 
+.card-product-final {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+
+  h1 {
+  color: #A92D48;
+  font-size: 27px;
+  }
+
+  h2 {
+    font-size: 12px;
+    }
+
+  p{
+  font-size: 14px;
+  }
+
+
+
+h3{
+font-size: 17px;
+font-weight: bold
+}
+
+
+h4{
+font-size: 27px;
+color: #A92D48;
+}
+}
+
+h5{
+font-size: 15px;
+
+}
+
+h6{
+font-size: 15px;
+
+
+}
+
+
+
 .card-product img {
   height: 100%;
   width: 35%;
