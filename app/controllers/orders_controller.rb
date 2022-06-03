@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
     @order.product = @product
     @order.user = current_user
     if @order.save
-      redirect_to @order
+      redirect_to @order, notice: '🎉 Purchase completed successfully. 🎉'
       # redirect_to list_path(@list)
     else
       render :new
