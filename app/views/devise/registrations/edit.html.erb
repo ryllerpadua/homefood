@@ -23,12 +23,14 @@
                   hint: "we need your current password to confirm your changes",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
-
+      <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+      <%= f.file_field :avatar %>
 
       <div class="form-actions d-grid">
         <%= f.button :submit, "Update", class: "btn-order mt-2 mb-3 align-items-center" %>
       </div>
     <% end %>
+
   </div>
   <div class="d-flex justify-content-between">
     <%= link_to "Back", :back, class: "btn btn-secondary" %>
