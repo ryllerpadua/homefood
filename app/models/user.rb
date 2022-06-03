@@ -8,14 +8,5 @@ class User < ApplicationRecord
 
   validates_presence_of :name, :address
 
-   def avatar_thumbnail
-     if avatar.attached?
-         avatar.variant(resize: "150x150!").processed
-     else
-       "assets/avatar.png"
-     end
-   end
+
 end
-
-
-# <%= image_tag(current_user.avatar_thumbnail) %>
