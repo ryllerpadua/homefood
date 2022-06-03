@@ -23,6 +23,7 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { class: 'homefood-input', autocomplete: "new-password" } %>
+        <%= f.input :avatar, as: :file %>
       </div>
       <div class="form-actions d-flex justify-content-center w-100 mt-5">
         <%= f.button :submit, "Sign up", class: "btn btn-primary text-center" %>
