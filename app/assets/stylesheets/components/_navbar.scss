@@ -4,10 +4,8 @@
   padding: 0;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   transition: 0.5s ease-out;
-
-
 }
 
 .navbar-white {
@@ -16,15 +14,15 @@
   transition: 0.5s;
   height: 80px;
 
-    #logo {
-    width: 60px;
-    height: 60px;
-    transition: 0.5s;
-    }
-    .nav-link {
-    color: #A82D49;
-    transition: 0.5s;
-    }
+  #logo {
+  width: 60px;
+  height: 60px;
+  transition: 0.5s;
+  }
+  .nav-link {
+  color: #A82D49;
+  transition: 0.5s;
+  }
 }
 
 
