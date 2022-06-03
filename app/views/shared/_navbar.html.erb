@@ -9,7 +9,7 @@
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
 
-        <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-bs-toggle": "dropdown", class: "avatar dropdown-toggle",  height: 40, width: 40 %>
+          <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-bs-toggle": "dropdown", class: "avatar dropdown-toggle",  height: 40, width: 40 %>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <p><strong>Hello, <%= "#{current_user.name.capitalize}!" %></strong></p>
           <%= link_to 'Edit', edit_user_registration_path, class: 'dropdown-item' %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
